@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initView();
         initData();
+        initView();
 
         loadFragment("Home", new navHomefrag());
     }
@@ -153,5 +153,11 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         fragmentTransaction.commit();
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 }

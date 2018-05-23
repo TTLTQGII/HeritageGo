@@ -8,6 +8,5 @@
         android:padding="1dp"
         android:id="@+id/recycler_view_home_tab_near"
         >
-
     </android.support.v7.widget.RecyclerView>
 </LinearLayout>

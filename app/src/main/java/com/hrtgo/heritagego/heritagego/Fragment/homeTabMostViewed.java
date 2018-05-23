@@ -1,6 +1,6 @@
 package com.hrtgo.heritagego.heritagego.Fragment;
 
-import android.annotation.SuppressLint;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

@@ -1,6 +1,5 @@
 package com.hrtgo.heritagego.heritagego.Fragment;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,8 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-
 import com.hrtgo.heritagego.heritagego.Adapter.rcvHomeAdapterTabFamous;
 import com.hrtgo.heritagego.heritagego.Model.LocationHome;
 import com.hrtgo.heritagego.heritagego.R;
@@ -20,7 +17,7 @@ import java.util.ArrayList;
 public class homeTabFamous extends Fragment {
 
     RecyclerView recyclerView;
-    ArrayList<LocationHome> locationFamous;
+    public ArrayList<LocationHome> locationFamous;
 
     @Nullable
     @Override
@@ -29,16 +26,9 @@ public class homeTabFamous extends Fragment {
         View view = inflater.inflate(R.layout.home_fragment_tab_famous, container, false);
 
         initView(view);
-        initData();
-//        Bundle bundle = getArguments();
-//        if(bundle != null){
-//            locationFamous = (ArrayList<LocationHome>) bundle.getSerializable("List");
-//            Toast.makeText(this.getContext(), String.valueOf(locationFamous.size()), Toast.LENGTH_LONG);
-//        }
-//        else {
-//            Toast.makeText(getActivity(), "fail", Toast.LENGTH_LONG);
-//        }
-        setHomeRecyclerView();
+        //initData();
+        //new testAsyn(this).execute();
+        //setHomeRecyclerView();
         return  view;
     }
 
@@ -48,22 +38,23 @@ public class homeTabFamous extends Fragment {
     }
 
     // set adapter for recyclerView at Tab Famous
-    private void setHomeRecyclerView(){
+//    public void setHomeRecyclerView(ArrayList<LocationHome> locationFamousTest){
+//
+//        locationFamous = locationFamousTest;
+//        recyclerView.setHasFixedSize(true);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
+//        recyclerView.setLayoutManager(linearLayoutManager);
+//        final rcvHomeAdapterTabFamous adapter = new rcvHomeAdapterTabFamous(locationFamous, getActivity());
+//        recyclerView.setAdapter(adapter);
+//    }
 
-        recyclerView.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
-        recyclerView.setLayoutManager(linearLayoutManager);
-        final rcvHomeAdapterTabFamous adapter = new rcvHomeAdapterTabFamous(locationFamous, getActivity());
-        recyclerView.setAdapter(adapter);
-    }
-
-    private void initData(){
-        locationFamous = new ArrayList<>();
-        locationFamous.add(new LocationHome(R.drawable.benh_vien_da_khoa_sai_gon, "20", "Bệnh Viện Đa Khoa Sài Gòn"));
-        locationFamous.add(new LocationHome(R.drawable.cho_ben_thanh, "50", "Chợ Bến Thành"));
-        locationFamous.add(new LocationHome(R.drawable.ben_nha_rong, "1000000", "Bến Nhà Rồng"));
-        locationFamous.add(new LocationHome(R.drawable.dinh_doc_lap, "1000", "Dinh Độc Lập"));
-        locationFamous.add(new LocationHome(R.drawable.buu_dien_trung_tam_sai_gon, "10000000", "Bưu Điện Trung Tâm Sài Gòn ABCDEFGHIJK"));
-        locationFamous.add(new LocationHome(R.drawable.cau_mong_sai_gon, "100000", "Cầu Mòng Sài Gòn"));
-    }
+//    private void initData(){
+//        locationFamous = new ArrayList<>();
+//        locationFamous.add(new LocationHome(R.drawable.benh_vien_da_khoa_sai_gon, "20", "Bệnh Viện Đa Khoa Sài Gòn"));
+//        locationFamous.add(new LocationHome(R.drawable.cho_ben_thanh, "50", "Chợ Bến Thành"));
+//        locationFamous.add(new LocationHome(R.drawable.ben_nha_rong, "1000000", "Bến Nhà Rồng"));
+//        locationFamous.add(new LocationHome(R.drawable.dinh_doc_lap, "1000", "Dinh Độc Lập"));
+//        locationFamous.add(new LocationHome(R.drawable.buu_dien_trung_tam_sai_gon, "10000000", "Bưu Điện Trung Tâm Sài Gòn ABCDEFGHIJK"));
+//        locationFamous.add(new LocationHome(R.drawable.cau_mong_sai_gon, "100000", "Cầu Mòng Sài Gòn"));
+//    }
 }
