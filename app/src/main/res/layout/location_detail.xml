@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    custom an Action bar
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/action_tool_bar_custom_location_detail"
+        android:layout_alignParentTop="true"
+        android:theme="@style/Acction_top_bar"
+        android:gravity="left"
+        />
+
+    <LinearLayout
+        android:weightSum="12"
+        android:orientation="vertical"
+        android:layout_below="@+id/action_tool_bar_custom_location_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
